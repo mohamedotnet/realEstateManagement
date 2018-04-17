@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <context:component-scan base-package="com.RealEstate" />
+    <context:annotation-config />
+
+    <bean id="customer" class="com.RealEstate.model.Customer" />
+    <bean id="agent"    class="com.RealEstate.model.Agent" />
+    <bean id="manager"  class="com.RealEstate.model.Manager" />
+    <bean id="admin"    class="com.RealEstate.model.Admin" />
+    <bean id="operator" class="com.RealEstate.model.Operator" />
+
+    <bean id="customerService"  class="com.RealEstate.service.CustomerServiceImpl" />
+    <bean id="adminService"     class="com.RealEstate.service.AdminServiceImpl" />
+    <bean id="agentService"     class="com.RealEstate.service.AgentServiceImpl" />
+    <bean id="operatorService"  class="com.RealEstate.service.OperatorServiceImpl" />
+    <bean id="managerService"   class="com.RealEstate.service.ManagerServiceImpl" />
+    <bean id="userService"      class="com.RealEstate.service.UserServiceImpl" />
+
+    <bean id="customerDao"      class="com.RealEstate.dao.CustomerDaoImpl" />
+    <bean id="adminDao"         class="com.RealEstate.dao.AdminDaoImpl" />
+    <bean id="agentDao"         class="com.RealEstate.dao.AgentDaoImpl" />
+    <bean id="managerDao"       class="com.RealEstate.dao.ManagerDaoImpl" />
+    <bean id="operatorDao"      class="com.RealEstate.dao.OperatorDaoImpl" />
+    <bean id="apartmentDao"     class="com.RealEstate.dao.ApartmentDaoImpl" />
+    <bean id="buildingDao"      class="com.RealEstate.dao.BuildingDaoImpl" />
+    <bean id="localityDao"      class="com.RealEstate.dao.LocalityDaoImpl" />
+    <bean id="appointmentDao"   class="com.RealEstate.dao.AppointmentDaoImpl" />
+    <bean id="reportDao"        class="com.RealEstate.dao.ReportDaoImpl" />
+    <bean id="saleDao"          class="com.RealEstate.dao.SaleDaoImpl" />
+    <bean id="visitDao"         class="com.RealEstate.dao.VisitDaoImpl" />
+    <bean id="contractDao"      class="com.RealEstate.dao.ContractDaoImpl" />
+
+    <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"    value="com.mysql.jdbc.Driver" />
+        <property name="url"                value="jdbc:mysql://localhost:3306/societeimmobiliere" />
+        <property name="username"           value="root" />
+        <property name="password"           value="root" />
+    </bean>
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="datasource" />
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.RealEstate.model.Customer</value>
+                <value>com.RealEstate.model.Admin</value>
+                <value>com.RealEstate.model.Agent</value>
+                <value>com.RealEstate.model.Manager</value>
+                <value>com.RealEstate.model.Appointment</value>
+                <value>com.RealEstate.model.Operator</value>
+                <value>com.RealEstate.model.Apartment</value>
+                <value>com.RealEstate.model.Sale</value>
+                <value>com.RealEstate.model.Locality</value>
+                <value>com.RealEstate.model.Building</value>
+                <value>com.RealEstate.model.Report</value>
+                <value>com.RealEstate.model.Visit</value>
+                <value>com.RealEstate.model.PaymentReceipt</value>
+                <value>com.RealEstate.model.Contract</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10000000" />
+    </bean>
+</beans>
