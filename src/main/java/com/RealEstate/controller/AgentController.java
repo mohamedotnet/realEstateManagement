@@ -1,19 +1,22 @@
 package com.RealEstate.controller;
 
-import com.RealEstate.model.*;
+import com.RealEstate.model.Agent;
+import com.RealEstate.model.Appointment;
+import com.RealEstate.model.Report;
+import com.RealEstate.model.Visit;
 import com.RealEstate.service.AgentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.List;
 
 @Controller
@@ -63,6 +66,23 @@ public class AgentController {
         return "Agent/removeReport";
     }
 
+    @GetMapping("Agent/appointments")
+    public String getAppointments(Model m, HttpSession session){
+        if (session.getAttribute("username") == null || !session.getAttribute("role").equals("agent")){
+            m.addAttribute("agent", new Agent());
+            return "Agent/login";
+        }
+        /*
+            TODO: Handle empty list..
+         */
+        List<Appointment> list = agentService.getAppList(agentService.getAgentByUsername(
+                                              (String)session.getAttribute("username")));
+        m.addAttribute("array", list);
+        m.addAttribute("app", new Appointment());
+        return "Agent/appointments";
+    }
+
+
     @GetMapping("/Agent/editReport")
     public String editReport(Model m, HttpSession session) {
         if (session.getAttribute("username") == null || !session.getAttribute("role").equals("agent")){
@@ -83,10 +103,7 @@ public class AgentController {
             return "Agent/login";
         }
         List<Visit> list = agentService.getVisitsListByAgent(agent.getUsername());
-        Visit[] array = new Visit[list.size()];
-        array = list.toArray(array);
-        m.addAttribute("list", array);
-        m.addAttribute("size", list.size());
+        m.addAttribute("array", list);
         m.addAttribute("visit", new Visit());
         return "Agent/programVisits";
     }
@@ -152,6 +169,20 @@ public class AgentController {
             return "Agent/removeReport";
         }
         agentService.removeReport(report.getId());
+        return "Agent/agentSpace";
+    }
+
+    @PostMapping("/validateAppointment")
+    public String getAppointmentsPost(@Valid @ModelAttribute("SpringWeb") Appointment app, BindingResult bindingResult,
+                                      Model m, HttpSession session){
+        if (session.getAttribute("username") == null || !session.getAttribute("role").equals("agent")){
+            m.addAttribute("agent", new Agent());
+            return "Agent/login";
+        }
+        if (bindingResult.hasErrors()) {
+            return "Agent/appointments";
+        }
+        agentService.validateAppointment(app, (String)session.getAttribute("username"));
         return "Agent/agentSpace";
     }
 

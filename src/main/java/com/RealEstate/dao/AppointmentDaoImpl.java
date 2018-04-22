@@ -7,13 +7,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
 import javax.persistence.Query;
 import java.sql.Date;
 import java.sql.Time;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 @Repository
@@ -22,24 +20,82 @@ public class AppointmentDaoImpl implements AppointmentDao {
     @Autowired
     private SessionFactory sessionFactory ;
 
+    @Autowired
+    private VisitDao visitDao;
     public AppointmentDaoImpl() {
 
     }
 
-    public void storeAppointment(Appointment app) {
+    public void confirmAppointment(Appointment appointment, String agent){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("UPDATE Appointment SET status = 1 WHERE reference =:ref");
+        query.setParameter("ref", appointment.getReference());
+        query.executeUpdate();
+        session.getTransaction().commit();
+        session.close();
+        Visit visit = new Visit(appointment.getReference(), appointment.getDate(),
+                                appointment.getTime(), appointment.getCustomer(),
+                                agent);
+        visitDao.storeVisit(visit);
+    }
+    public Appointment createAppObject(Date date, Time time, String username, String apartment){
+        String reference = "RDV" + date + "/" + time + apartment;
+        System.out.println(date);
+        System.out.println(time);
+        System.out.println(username);
+        System.out.println(apartment);
+        System.out.println(reference);
+        return new Appointment(date, reference, time, username, apartment);
+    }
+    @SuppressWarnings("unchecked")
+    public List<Appointment> getAppointmentsListByLocality(Agent agent){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("FROM Appointment WHERE status = false AND appartment " +
+                                                  "IN (SELECT reference FROM Apartment WHERE building " +
+                                                  "IN (SELECT id FROM Building WHERE locality = :loc))");
+        query.setParameter("loc", agent.getLocality());
+        List list = query.getResultList();
+        session.getTransaction().commit();
+        session.close();
+        return (List<Appointment>) list;
+    }
+    /*
+        TODO: Check Date Validity
+     */
+    public boolean checkIfAppointmentExists(Appointment appointment){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("FROM Appointment WHERE reference =:ref");
+        query.setParameter("ref", appointment.getReference());
+        List list = query.getResultList();
+        session.getTransaction().commit();
+        session.close();
+        return list.isEmpty();
+    }
+    public void storeAppointment(Appointment appointment){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.save(appointment);
+        session.getTransaction().commit();
+        session.close();
+    }
+
+    /*public void storeAppointment(Appointment app) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Query query = session.createQuery("from Agent where locality = :locality ORDER BY nbrAffectation ASC");
         query.setParameter("locality", app.getLocality());
         List list = query.getResultList();
         String agent = ((Agent) list.get(0)).getUsername();
-        app.setAgent(agent);
+        //app.setAgent(agent);
         session.save(app);
         Visit v = new Visit(app.getReference(), app.getCustomer(), app.getAgent());
         session.save(v);
         session.getTransaction().commit();
         session.close();
-    }
+    }*/
 
     public Appointment readAppointmentById(int id) {
         Session session = sessionFactory.openSession();
@@ -80,6 +136,18 @@ public class AppointmentDaoImpl implements AppointmentDao {
         session.close();
     }
 
+    @Override
+    @SuppressWarnings("unchecked")
+    public List<Appointment> getAppList() {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("FROM Appointment");
+        List list = query.getResultList();
+        session.getTransaction().commit();
+        session.close();
+        return (List<Appointment>) list;
+    }
+
     public void deleteAppointment(String reference) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
@@ -92,8 +160,11 @@ public class AppointmentDaoImpl implements AppointmentDao {
         session.getTransaction().commit();
         session.close();
     }
+    /*public boolean isDateValid(Date date){
+        if (new java.sql.Date(new java.util.Date().getTime())
+    }*/
 
-    @SuppressWarnings("unchecked")
+    /*@SuppressWarnings("unchecked")
     public List<Appointment> getAppointmentsList() {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
@@ -102,10 +173,23 @@ public class AppointmentDaoImpl implements AppointmentDao {
         session.getTransaction().commit();
         session.close();
         return (List<Appointment>) list;
-    }
+    }*/
 
     @SuppressWarnings("unchecked")
     public List<Appointment> getAppointmentsListByCustomer(String customer) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("FROM Appointment WHERE customer = :customer and status = true");
+        query.setParameter("customer", customer);
+        List list = query.getResultList();
+        session.getTransaction().commit();
+        session.close();
+        return (List<Appointment>) list;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    public List<Appointment> getAllAppointmentsListByCustomer(String customer) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Query query = session.createQuery("FROM Appointment WHERE customer = :customer");
@@ -116,7 +200,7 @@ public class AppointmentDaoImpl implements AppointmentDao {
         return (List<Appointment>) list;
     }
 
-    public List<Appointment> createAppointmentList() {
+    /*public List<Appointment> createAppointmentList() {
         List<Appointment> list = new ArrayList<Appointment>();
         Date date =  new java.sql.Date(new java.util.Date().getTime());
         int hour = Integer.parseInt(("" + new java.sql.Time(new java.util.Date().getTime())).substring(0,2));
@@ -161,5 +245,5 @@ public class AppointmentDaoImpl implements AppointmentDao {
             }
         }
         return list2;
-    }
+    }*/
 }

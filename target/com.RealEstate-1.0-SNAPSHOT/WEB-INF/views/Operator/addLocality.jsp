@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link href="/resources/css/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/customer.css" />">
 </head>
 
 <style>
@@ -117,17 +118,70 @@
                 <li><a href="${pageContext.request.contextPath}/Operator/addBuilding">Ajouter Un Batiment</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addLocality">Ajouter Une Localité</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addCustomer">Ajouter Un Client</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment">Annuler Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/customerList?customer=default">Fixer Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment?customer=default">Annuler Un Rendez-Vous</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/changeProfilePicture">Changer Photo De Profile</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/fixAppointment">Fixer Un Rendez-Vous</a></li>
-                <li><form action="/logout" method="post">
-                    <button type="submit" class="btn btn-primary mb-2">Se Déconnecter</button>
-                </form></li>
             </ul>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn btn-light ml-4" style="width:200px;">Se Déconnecter</button>
+            </form>
         </nav>
 
-        <div id="content">
-            <h1 class="display-1"> Welcome ${operator.name}</h1>
+        <div class="container">
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <h2>Ajouter une Localité</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6 order-md-1">
+                    <form:form modelAttribute="locality" class="needs-validation" method="post" action="/addLocalitySuccess">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Nom:</label>
+                                <form:input path="name" type="text" class="form-control" id="firstName" placeholder="" value="" required="required"/>
+                                <div class="invalid-feedback">
+                                    Veuillez entrer un nom valable.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="username">Adresse</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">@</span>
+                                </div>
+                                <form:input path="address" type="text" class="form-control" id="username" placeholder="Nom d'utilisateur" required="required"/>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    L'adresse est obligatoire
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email">Nombre de batiment</label>
+                            <form:input path="nbrBuilding" type="number" class="form-control" id="email" required="required"/>
+                            <div class="invalid-feedback">
+                                Veuillez entrer un nombre de batiment valide.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone">Nombre de parking</label>
+                            <form:input path="nbrParking" type="number" class="form-control" id="phone" required="required"/>
+                            <div class="invalid-feedback">
+                                Veuillez entrer un nombre de parking valide.
+                            </div>
+                        </div>
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg btn-block"  type="submit">S'inscrire</button>
+                    </form:form>
+                </div>
+            </div>
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">&copy; 2018-2019 Société Immobilière</p>
+            </footer>
         </div>
 
     </div>

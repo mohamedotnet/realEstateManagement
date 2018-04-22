@@ -2,8 +2,8 @@ package com.RealEstate.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Time;
 import java.sql.Date;
+import java.sql.Time;
 
 
 @Entity
@@ -22,18 +22,18 @@ public class Appointment implements Serializable {
     private Time time;
     @Column(name = "customer")
     private String customer;
-    @Column(name = "agent")
-    private String agent;
-    @Column(name = "locality")
-    private String locality;
+    @Column(name = "appartment_ref")
+    private String appartment;
+    @Column(name = "status")
+    private boolean status;
 
-    public Appointment(String reference, Date date, Time time, String customer, String locality, String agent) {
-        this.reference = reference;
+    public Appointment(Date date, String reference, Time time, String customer, String appartment) {
         this.date = date;
+        this.reference = reference;
         this.time = time;
         this.customer = customer;
-        this.agent = agent;
-        this.locality = locality;
+        this.appartment = appartment;
+        this.status = false;
     }
 
     public Appointment() {
@@ -72,12 +72,13 @@ public class Appointment implements Serializable {
         this.customer = customer;
     }
 
-    public String getAgent() {
-        return agent;
+
+    public String getAppartment() {
+        return appartment;
     }
 
-    public void setAgent(String agent) {
-        this.agent = agent;
+    public void setAppartment(String appartment) {
+        this.appartment = appartment;
     }
 
     public String getReference() {
@@ -88,11 +89,11 @@ public class Appointment implements Serializable {
         this.reference = reference;
     }
 
-    public String getLocality() {
-        return locality;
+    public boolean isStatus() {
+        return status;
     }
 
-    public void setLocality(String locality) {
-        this.locality = locality;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }

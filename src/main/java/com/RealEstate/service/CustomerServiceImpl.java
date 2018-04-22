@@ -1,15 +1,13 @@
 package com.RealEstate.service;
 
 import com.RealEstate.dao.*;
-import com.RealEstate.model.Appointment;
-import com.RealEstate.model.Customer;
-
-import com.RealEstate.model.PaymentReceipt;
-import com.RealEstate.model.Sale;
+import com.RealEstate.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.sql.Date;
+import java.sql.Time;
 import java.util.List;
 
 @Service
@@ -72,12 +70,32 @@ public class CustomerServiceImpl implements CustomerService {
         return appointmentDao.getAppointmentsListByCustomer(username);
     }
 
+    @Override
+    public List<Appointment> getAllAppointmentsListByCustomer(String username) {
+        return appointmentDao.getAllAppointmentsListByCustomer(username);
+    }
+
+    @Override
+    public List<Apartment> getAppartmentList() {
+        return apartmentDao.apartmentList();
+    }
+
+    @Override
+    public Apartment getAppartmentByRef(String ref) {
+        return apartmentDao.readApartmentByReference(ref);
+    }
+
     public void cancelAppointment(String reference){
         appointmentDao.deleteAppointment(reference);
     }
 
     public List<Sale> getSalesList(String username) {
         return saleDao.getSalesListByCustomer(username);
+    }
+
+    @Override
+    public List<Customer> getCustomerByName(String name) {
+        return customerDao.getCustomerByName(name);
     }
 
     public void validateSale(String reference, PaymentReceipt paymentReceipt) {
@@ -89,16 +107,24 @@ public class CustomerServiceImpl implements CustomerService {
         return customerDao.changeProfilePicture(file, username);
     }
 
-    public void addAppointment(Appointment appointment) {
+
+    /*public void addAppointment(Appointment appointment) {
         appointmentDao.storeAppointment(appointment);
-    }
+    }*/
 
-    public List<Appointment> getAppointmentsList() {
+    /*public List<Appointment> getAppointmentsList() {
         return appointmentDao.createAppointmentList();
-    }
-
+    }*/
     public PaymentReceipt createPaymentReceipt(MultipartFile file, int value, String bank, String date, String time, String customer) {
         return paymentReceiptDao.createPaymentReceipt(file, value, bank, date, time, customer);
     }
 
+    @Override
+    public void fixApp(Appointment app) {
+        appointmentDao.storeAppointment(app);
+    }
+
+    public Appointment chooseApp(Date date, Time time, String username, String apartment){
+        return appointmentDao.createAppObject(date, time, username, apartment);
+    }
 }

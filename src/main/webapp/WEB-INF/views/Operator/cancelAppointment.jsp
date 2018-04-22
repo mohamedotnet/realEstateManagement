@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link href="/resources/css/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/customer.css" />">
 </head>
 
 <style>
@@ -117,17 +118,63 @@
                 <li><a href="${pageContext.request.contextPath}/Operator/addBuilding">Ajouter Un Batiment</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addLocality">Ajouter Une Localité</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addCustomer">Ajouter Un Client</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment">Annuler Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/customerList?customer=default">Fixer Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment?customer=default">Annuler Un Rendez-Vous</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/changeProfilePicture">Changer Photo De Profile</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/fixAppointment">Fixer Un Rendez-Vous</a></li>
-                <li><form action="/logout" method="post">
-                    <button type="submit" class="btn btn-primary mb-2">Se Déconnecter</button>
-                </form></li>
             </ul>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn btn-light ml-4" style="width:200px;">Se Déconnecter</button>
+            </form>
         </nav>
 
-        <div id="content">
-            <h1 class="display-1"> Welcome ${operator.name}</h1>
+        <div class="container">
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <h2>Annuler un Rendez-Vous</h2>
+            </div>
+
+            <form class="form-inline" method="get" action="/Operator/cancelAppointment">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="inputPassword2" class="sr-only">Nom:</label>
+                    <input type="text" class="form-control" id="inputPassword2" name="customer" placeholder="Nom du client">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Rechercher</button>
+            </form>
+
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Heure</th>
+                    <th scope="col">Appartement</th>
+                    <th scope="col">Client</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${array}" var="app">
+                    <tr>
+                        <th scope="row">${app.id}</th>
+                        <td>${app.date}</td>
+                        <td>${app.time}</td>
+                        <td>${app.appartment}</td>
+                        <td>${app.customer}</td>
+                        <td><form:form modelAttribute="appt" action="/cancelAppointmentSuccess" method="post">
+                            <form:hidden path="id" value="${app.id}"/>
+                            <form:hidden path="reference" value="${app.reference}"/>
+                            <form:hidden path="date" value="${app.date}"/>
+                            <form:hidden path="time" value="${app.time}"/>
+                            <form:hidden path="customer" value="${app.customer}"/>
+                            <form:hidden path="appartment" value="${app.appartment}"/>
+                            <form:hidden path="status" value="${app.status}"/>
+                            <button type="submit" class="btn btn-primary mb-2">Annuler le rendez-vous</button>
+                        </form:form>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
         </div>
 
     </div>

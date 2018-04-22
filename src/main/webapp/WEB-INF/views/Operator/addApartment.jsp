@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link href="/resources/css/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/customer.css" />">
 </head>
 
 <style>
@@ -117,17 +118,102 @@
                 <li><a href="${pageContext.request.contextPath}/Operator/addBuilding">Ajouter Un Batiment</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addLocality">Ajouter Une Localité</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addCustomer">Ajouter Un Client</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment">Annuler Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/customerList?customer=default">Fixer Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment?customer=default">Annuler Un Rendez-Vous</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/changeProfilePicture">Changer Photo De Profile</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/fixAppointment">Fixer Un Rendez-Vous</a></li>
-                <li><form action="/logout" method="post">
-                    <button type="submit" class="btn btn-primary mb-2">Se Déconnecter</button>
-                </form></li>
             </ul>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn btn-light ml-4" style="width:200px;">Se Déconnecter</button>
+            </form>
         </nav>
 
-        <div id="content">
-            <h1 class="display-1"> Welcome ${operator.name}</h1>
+        <div class="container">
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <h2>Ajouter Un Appartement</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6 order-md-1">
+                    <form class="needs-validation" method="post" action="/addApartmentSuccess" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Reference</label>
+                                <input name="reference" type="text" class="form-control" id="firstName" placeholder="Réference"  required="required"/>
+                                <div class="invalid-feedback">
+                                    Veuillez entrer une réference valide.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nbetage">Nombre d'étage</label>
+                            <input name="floor" type="text" class="form-control" id="nbetage" placeholder="Nombre d'étage" required="required"/>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Veuillez entre un numéro d'étage valide.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nbroom">Nombre de pièces</label>
+                            <input name="nbrRoom" type="text" class="form-control" id="nbroom" placeholder="Nombre de pièces" required="required"/>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Veuillez entre un nombre de pièces valide.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nbrbalcon">Nombre de balcons</label>
+                            <input name="nbrBalcony" type="number" class="form-control" id="nbrbalcon" placeholder="Nombre de Balcon" required="required"/>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Veuillez entre un nombre de pièces valide.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="prix">Prix</label>
+                            <input name="price" type="number" class="form-control" id="prix" placeholder="Prix" required="required"/>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Veuillez entre un prix valide.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="type">Type</label>
+                            <input name="type" type="text" class="form-control" id="type" placeholder="Type" required="required"/>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Veuillez entre un type valide.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="surface">Surface</label>
+                            <input name="surface" type="number" class="form-control" id="surface" placeholder="Surface" required="required"/>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Veuillez entre une surface valide.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="surface">Batiment</label>
+                            <select name="building" class="custom-select custom-select-lg mb-3">
+                                <c:forEach items="${array}" var="building">
+                                    <option value= "${building.id}">${building.id}</option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div class="custom-file">
+                                <input name="picture" type="file" class="custom-file-input" id="validatedCustomFile" multiple="multiple"/>
+                                <label class="custom-file-label" for="validatedCustomFile">Ajouter 5 Photos...</label>
+                                <div class="invalid-feedback">Example invalid custom file feedback</div>
+                            </div>
+                        </div>
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg btn-block"  type="submit">Ajouter Appartment</button>
+                    </form>
+                </div>
+            </div>
         </div>
 
     </div>

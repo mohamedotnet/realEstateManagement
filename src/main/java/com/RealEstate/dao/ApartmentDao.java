@@ -1,11 +1,13 @@
 package com.RealEstate.dao;
 
 import com.RealEstate.model.Apartment;
+import com.RealEstate.model.Locality;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
 public interface ApartmentDao {
+    Locality getAppartmentLocality(String app);
     Apartment createApartment(String reference, String price, String floor, String type, String nbrRoom, String building, String surface, String nbrBalcony, MultipartFile[] pictures);
     void storeApartment(Apartment apartment);
     Apartment readApartmentById(int id);

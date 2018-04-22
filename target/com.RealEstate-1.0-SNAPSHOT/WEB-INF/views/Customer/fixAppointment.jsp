@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link href="/resources/css/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/customer.css" />">
 </head>
 
 <style>
@@ -114,18 +115,91 @@
             <ul class="list-unstyled components">
                 <li class="active"><a href="${pageContext.request.contextPath}/Customer/customerSpace">Acceuil</a></li>
                 <li><a href="${pageContext.request.contextPath}/Customer/addPaymentReceipt">Ajouter Reçu de Paiement</a></li>
-                <li><a href="${pageContext.request.contextPath}/Customer/fixAppointment">Fixer un Rendez-vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Customer/appointments">Mes rendez-vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Customer/appartmentList">Fixer un Rendez-vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Customer/cancelAppointment">Annuler un Rendez-vous</a></li>
                 <li><a href="${pageContext.request.contextPath}/Customer/myPurchases">Mes achats</a></li>
                 <li><a href="${pageContext.request.contextPath}/Customer/cancelAppointment">Annuler un Paiement</a></li>
-                <li><form action="/logout" method="post">
-                    <button type="submit" class="btn btn-primary mb-2">Se Déconnecter</button>
-                </form></li>
             </ul>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn btn-light ml-4" style="width:200px;">Se Déconnecter</button>
+            </form>
         </nav>
 
-        <div id="content">
-            <h1 class="display-1"> Welcome ${customer.name}</h1>
+        <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 mt-4">
+                        <div class="card">
+                            <div class="card-body" style="padding: 0;">
+                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" style="width: 850px; height: 450px;" src="/${appr.picture1}" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" style="width: 850px; height: 450px;" src="/${appr.picture2}" alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" style="width: 850px; height: 450px;" src="/${appr.picture3}" alt="Third slide">
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card" style="height: 320px;">
+                            <div class="card-header">
+                                <h4 style="font-size: 1.32rem; margin-bottom: 0;" class="card-title">Rendez-Vous</h4>
+                            </div>
+
+                            <div class="card-body" style="padding: 0;">
+                                <div class="card-block" style="padding: 2rem;">
+                                    <form class="form" method="post" action="/fixAppointmentSuccessC">
+                                        <div class="form-body">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label for="date">Date: </label>
+                                                    <input type="date" id="date" name="date" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="time">Heure: </label>
+                                                    <div class="position-relative has-icon-left">
+                                                        <input type="time" id="time" name="time" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="app_ref" value="${appr.reference}" class="form-control">
+                                            </div>
+                                            <button type="submit" class="btn btn-dark" style="width: 180px;">Prendre</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <br>
+            <div class="jumbotron">
+                <h1 class="display-4">Appartement: ${appr.reference}</h1>
+                <p class="lead">Un appartement de <bold>${appr.nbrRoom}</bold> pièces et ${appr.nbrBalcony} balcons. Situé au ${appr.floor} dans le batiment N°: ${appr.building}. Surface de ${appr.surface} mètres carrés et son prix est de: ${appr.price} DA.</p>
+                <hr class="my-4">
+            </div>
         </div>
+
 
     </div>
 

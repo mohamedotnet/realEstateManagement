@@ -150,7 +150,7 @@ public class OperatorDaoImpl implements OperatorDao {
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
-                String rootPath = "C:\\Users\\B.IHAB\\workspace3\\RealEstate\\src\\main\\resources\\images";
+                String rootPath = "C:\\Users\\Sassi\\Documents\\RealEstate-master\\src\\main\\resources\\images";
                 File dir = new File(rootPath + File.separator + "operator");
                 File serverFile = new File(dir.getAbsolutePath() + File.separator + picture);
                 BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));

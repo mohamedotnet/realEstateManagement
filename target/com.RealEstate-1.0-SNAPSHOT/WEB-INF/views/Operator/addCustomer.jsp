@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link href="/resources/css/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/customer.css" />">
 </head>
 
 <style>
@@ -117,13 +118,13 @@
                 <li><a href="${pageContext.request.contextPath}/Operator/addBuilding">Ajouter Un Batiment</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addLocality">Ajouter Une Localité</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addCustomer">Ajouter Un Client</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment">Annuler Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/customerList?customer=default">Fixer Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment?customer=default">Annuler Un Rendez-Vous</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/changeProfilePicture">Changer Photo De Profile</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/fixAppointment">Fixer Un Rendez-Vous</a></li>
-                <li><form action="/logout" method="post">
-                    <button type="submit" class="btn btn-primary mb-2">Se Déconnecter</button>
-                </form></li>
             </ul>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn btn-light ml-4" style="width:200px;">Se Déconnecter</button>
+            </form>
         </nav>
 
         <div class="container">

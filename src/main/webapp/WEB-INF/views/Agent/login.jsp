@@ -5,12 +5,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--================================================================================
-  Item Name: Materialize - Material Design Admin Template
-  Version: 3.1
-  Author: GeeksLabs
-  Author URL: http://www.themeforest.net/user/geekslabs
-================================================================================ -->
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

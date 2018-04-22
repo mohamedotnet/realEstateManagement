@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link href="/resources/css/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/customer.css" />">
 </head>
 
 <style>
@@ -114,14 +115,15 @@
             <ul class="list-unstyled components">
                 <li class="active"><a href="${pageContext.request.contextPath}/Agent/agentSpace">Acceuil</a></li>
                 <li><a href="${pageContext.request.contextPath}/Agent/changeProfilePicture">Changer Photo de Profile</a></li>
-                <li><a href="${pageContext.request.contextPath}/Agent/programVisits">Programme du Visite</a></li>
+                <li><a href="${pageContext.request.contextPath}/Agent/appointments">Liste des Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Agent/programVisits">Programme de Visite</a></li>
                 <li><a href="${pageContext.request.contextPath}/Agent/addReport">Ajouter un Rapport</a></li>
                 <li><a href="${pageContext.request.contextPath}/Agent/editReport">Modifier un Rapport</a></li>
                 <li><a href="${pageContext.request.contextPath}/Agent/removeReport">Supprimer un Rapport</a></li>
-                <li><form action="/logout" method="post">
-                    <button type="submit" class="btn btn-primary mb-2">Se Déconnecter</button>
-                </form></li>
             </ul>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn btn-light ml-4" style="width:200px;">Se Déconnecter</button>
+            </form>
         </nav>
 
         <div id="content">

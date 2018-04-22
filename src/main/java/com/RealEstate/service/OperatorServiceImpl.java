@@ -90,13 +90,13 @@ public class OperatorServiceImpl implements OperatorService {
         appointmentDao.deleteAppointment(reference);
     }
 
-    public List<Appointment> getAppointmentsList() {
+    /*public List<Appointment> getAppointmentsList() {
         return appointmentDao.getAppointmentsList();
     }
 
-    public List<Appointment> createAppointmentsList() {
+    /*public List<Appointment> createAppointmentsList() {
         return appointmentDao.createAppointmentList();
-    }
+    }*/
 
     public String changeProfilePicture(MultipartFile file, String username) {
         return operatorDao.changeProfilePicture(file, username);
@@ -112,5 +112,20 @@ public class OperatorServiceImpl implements OperatorService {
 
     public Operator createOperator(String name, String lastName, String username, String sex, String birthday, String phone, String email, String password, String address, String idNumber) {
         return operatorDao.storeOperator(name, lastName, username, sex, birthday, phone, email, password, address, idNumber);
+    }
+
+    @Override
+    public List<Locality> getLocalityList() {
+        return localityDao.getLocalitiesList();
+    }
+
+    @Override
+    public List<Building> getBuildingList() {
+        return buildingDao.getBuildingsList();
+    }
+
+    @Override
+    public List<Appointment> getAppList() {
+        return appointmentDao.getAppList();
     }
 }

@@ -1,7 +1,6 @@
 package com.RealEstate.dao;
 
 import com.RealEstate.model.Customer;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -178,6 +177,19 @@ public class CustomerDaoImpl implements CustomerDao {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Query query = session.createQuery("FROM Customer WHERE isActivated=false");
+        List list = query.getResultList();
+        session.getTransaction().commit();
+        session.close();
+        return (List<Customer>) list;
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public List<Customer> getCustomerByName(String name) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("FROM Customer WHERE name=:name");
+        query.setParameter("name", name);
         List list = query.getResultList();
         session.getTransaction().commit();
         session.close();

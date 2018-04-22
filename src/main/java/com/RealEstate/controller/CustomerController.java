@@ -2,19 +2,18 @@ package com.RealEstate.controller;
 
 import com.RealEstate.model.*;
 import com.RealEstate.service.CustomerService;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.sql.Date;
 import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -65,18 +64,23 @@ public class CustomerController {
     }
 
     @GetMapping("/Customer/fixAppointment")
-    public String fixAppointment(Model m, HttpSession session) {
+    public String fixAppointment(Model m,
+                                 @RequestParam("ref") String ref,
+                                 HttpSession session) {
         if (session.getAttribute("username") == null || !session.getAttribute("role").equals("customer")){
             m.addAttribute("customer", new Customer());
+            m.addAttribute("appointment", new Appointment());
             return "Customer/login";
         }
-        List<Appointment> list = customerService.getAppointmentsList();
+        Apartment apartment = customerService.getAppartmentByRef(ref);
+        m.addAttribute("appr", apartment);
+        /*List<Appointment> list = customerService.getAppointmentsList();
         Appointment[] array = new Appointment[list.size()];
         array = list.toArray(array);
         m.addAttribute("customer", this.customer);
         m.addAttribute("list", array);
         m.addAttribute("size", list.size());
-        m.addAttribute("appointment", new Appointment());
+        m.addAttribute("appointment", new Appointment());*/
         return "Customer/fixAppointment";
     }
 
@@ -117,7 +121,28 @@ public class CustomerController {
         return "Customer/customerSpace";
     }
 
+    @GetMapping("/Customer/appartmentList")
+    public String apList(Model m, HttpSession session){
+        if (session.getAttribute("username") == null || !session.getAttribute("role").equals("customer")){
+            m.addAttribute("customer", new Customer());
+            return "Customer/login";
+        }
+        List<Apartment> list = customerService.getAppartmentList();
+        m.addAttribute("array", list);
+        return "Customer/apList";
+    }
 
+    @GetMapping("/Customer/appointments")
+    public String appointments(Model m, HttpSession session){
+        if (session.getAttribute("username") == null || !session.getAttribute("role").equals("customer")){
+            m.addAttribute("customer", new Customer());
+            return "Customer/login";
+        }
+        List<Appointment> list = customerService.getAllAppointmentsListByCustomer((String)session.getAttribute("username"));
+        m.addAttribute("array", list);
+        m.addAttribute("appt", new Appointment());
+        return "Customer/appointments";
+    }
     @GetMapping("/Customer/addPaymentReceipt")
     public String addPaymentReceipt(Model m, HttpSession session){
         if (session.getAttribute("username") == null || !session.getAttribute("role").equals("customer")){
@@ -181,29 +206,29 @@ public class CustomerController {
             m.addAttribute("customer", new Customer());
             return "Customer/login";
         }
-        List<Appointment> list = customerService.getAppointmentsListByCustomer(customer.getUsername());
-        Appointment[] array = new Appointment[list.size()];
-        array = list.toArray(array);
-        m.addAttribute("list", array);
-        m.addAttribute("size", list.size());
+        List<Appointment> list = customerService.getAppointmentsListByCustomer((String)session.getAttribute("username"));
+        m.addAttribute("array", list);
         m.addAttribute("appointment", new Appointment());
         return "Customer/cancelAppointment";
     }
 
     @PostMapping("/fixAppointmentSuccessC")
-    public String fixAppointmentSuccess(@Valid @ModelAttribute("SpringWeb")Appointment appointment, BindingResult bindingResult, Model model,
-                                        HttpSession session){
+    public String fixAppointmentSuccess(Model model,
+                                        @RequestParam("date") String date, @RequestParam("time") String time,
+                                        @RequestParam("app_ref") String ref,
+                                        HttpSession session) throws ParseException {
         if (session.getAttribute("username") == null || !session.getAttribute("role").equals("customer")){
             model.addAttribute("customer", new Customer());
             return "Customer/login";
         }
-        if(bindingResult.hasErrors())
-            return "Customer/fixAppointment";
-        System.out.println(appointment.getCustomer());
-        System.out.println(appointment.getReference());
-        System.out.println(appointment.getAgent());
-        customerService.addAppointment(appointment);
-        model.addAttribute("appointment", appointment);
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
+        long tm = sdf.parse(time).getTime();
+        Time t = new Time(tm);
+        System.out.println(t);
+        Appointment app = customerService.chooseApp(java.sql.Date.valueOf(date), t,
+                                                    (String)session.getAttribute("username"), ref);
+        System.out.println(app);
+        customerService.fixApp(app);
         return "Customer/customerSpace";
     }
 

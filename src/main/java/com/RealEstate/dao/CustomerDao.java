@@ -19,6 +19,7 @@ public interface CustomerDao {
     String changeProfilePicture(MultipartFile file, String username);
     List<Customer> getCustomersList();
     List<Customer> getCustomerListUnActive();
+    List<Customer> getCustomerByName(String name);
     Customer createCustomer(String name, String lastName, String username, String sex, String birthday, String phone, String email, String password, String address, String idNumber);
 }
 

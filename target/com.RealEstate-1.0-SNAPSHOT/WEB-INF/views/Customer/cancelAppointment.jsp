@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link href="/resources/css/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/customer.css" />">
 </head>
 
 </body>
@@ -115,17 +116,55 @@
             <ul class="list-unstyled components">
                 <li class="active"><a href="${pageContext.request.contextPath}/Customer/customerSpace">Acceuil</a></li>
                 <li><a href="${pageContext.request.contextPath}/Customer/addPaymentReceipt">Ajouter Reçu de Paiement</a></li>
-                <li><a href="${pageContext.request.contextPath}/Customer/fixAppointment">Fixer un Rendez-vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Customer/appointments">Mes rendez-vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Customer/appartmentList">Fixer un Rendez-vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Customer/cancelAppointment">Annuler un Rendez-vous</a></li>
                 <li><a href="${pageContext.request.contextPath}/Customer/myPurchases">Mes achats</a></li>
                 <li><a href="${pageContext.request.contextPath}/Customer/cancelAppointment">Annuler un Paiement</a></li>
-                <li><form action="/logout" method="post">
-                    <button type="submit" class="btn btn-primary mb-2">Se Déconnecter</button>
-                </form></li>
             </ul>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn btn-light ml-4" style="width:200px;">Se Déconnecter</button>
+            </form>
         </nav>
 
-        <div id="content">
-            <h1 class="display-1"> Welcome ${customer.name}</h1>
+        <div class="container">
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <h2>Annuler un Rendez-Vous</h2>
+            </div>
+
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Heure</th>
+                    <th scope="col">Appartement</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${array}" var="app">
+                    <tr>
+                        <th scope="row">${app.reference}</th>
+                        <td>${app.date}</td>
+                        <td>${app.time}</td>
+                        <td>${app.appartment}</td>
+                        <td><form:form modelAttribute="appointment" action="/cancelAppointmentSuccessC" method="post">
+                            <form:hidden path="id" value="${app.id}"/>
+                            <form:hidden path="reference" value="${app.reference}"/>
+                            <form:hidden path="date" value="${app.date}"/>
+                            <form:hidden path="time" value="${app.time}"/>
+                            <form:hidden path="customer" value="${app.customer}"/>
+                            <form:hidden path="appartment" value="${app.appartment}"/>
+                            <form:hidden path="status" value="${app.status}"/>
+                            <button type="submit" class="btn btn-primary mb-2">Annuler le rendez-vous</button>
+                        </form:form>
+                        </td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
         </div>
 
     </div>
@@ -138,11 +177,6 @@
     <script src="/resources/js/bootstrap.min.js"></script>
 
     <script>
-        window.addEventListener('load', function errMessage() {
-            var err = '${err}';
-            if (err) {
-                toastr.error(err);
-            }
-        });
+
     </script>
 </html>
