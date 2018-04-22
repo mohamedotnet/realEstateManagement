@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link href="/resources/css/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/customer.css" />">
 </head>
 
 <style>
@@ -117,17 +118,55 @@
                 <li><a href="${pageContext.request.contextPath}/Operator/addBuilding">Ajouter Un Batiment</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addLocality">Ajouter Une Localité</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addCustomer">Ajouter Un Client</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment">Annuler Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/customerList?customer=default">Fixer Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment?customer=default">Annuler Un Rendez-Vous</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/changeProfilePicture">Changer Photo De Profile</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/fixAppointment">Fixer Un Rendez-Vous</a></li>
-                <li><form action="/logout" method="post">
-                    <button type="submit" class="btn btn-primary mb-2">Se Déconnecter</button>
-                </form></li>
             </ul>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn btn-light ml-4" style="width:200px;">Se Déconnecter</button>
+            </form>
         </nav>
 
-        <div id="content">
-            <h1 class="display-1"> Welcome ${operator.name}</h1>
+        <div class="container">
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <h2>Ajouter un Batiment</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6 order-md-1">
+                    <form:form modelAttribute="building" class="needs-validation" method="post" action="/addBuildingSuccess">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Reference</label>
+                                <form:input path="reference" type="text" class="form-control" id="firstName" placeholder="" value="" required="required"/>
+                                <div class="invalid-feedback">
+                                    Veuillez entrer une réference valide.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="username">Nombre d'étage</label>
+                                <form:input path="nbrFloor" type="text" class="form-control" id="username" placeholder="Nom d'utilisateur" required="required"/>
+                                <div class="invalid-feedback" style="width: 100%;">
+                                    Veuillez entre un nombre d'étage valide.
+                                </div>
+                        </div>
+
+                        <form:select path="locality" class="custom-select custom-select-lg mb-3">
+                            <c:forEach items="${array}" var="locality">
+                                <form:option value= "${locality.name}">${locality.name}</form:option>
+                            </c:forEach>
+                        </form:select>
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg btn-block"  type="submit">Ajouter</button>
+                    </form:form>
+                </div>
+            </div>
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">&copy; 2018-2019 Société Immobilière</p>
+            </footer>
         </div>
 
     </div>

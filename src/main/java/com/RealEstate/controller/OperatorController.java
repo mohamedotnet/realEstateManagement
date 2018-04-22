@@ -2,20 +2,22 @@ package com.RealEstate.controller;
 
 
 import com.RealEstate.model.*;
+import com.RealEstate.service.AdminService;
 import com.RealEstate.service.CustomerService;
 import com.RealEstate.service.OperatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
+import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -31,6 +33,9 @@ public class OperatorController {
 
     @Autowired
     protected CustomerService customerService;
+
+    @Autowired
+    protected AdminService adminService;
 
     public OperatorService getOperatorService() {
         return operatorService;
@@ -81,7 +86,79 @@ public class OperatorController {
             m.addAttribute("operator", new Operator());
             return "Operator/login";
         }
+        Operator op = operatorService.getOperatorByUsername((String)session.getAttribute("username"));
+        System.out.println(op.getPicture());
+        m.addAttribute("operator", op);
         return "Operator/changeProfilePicture";
+    }
+
+    @GetMapping("/Operator/fixAppointment")
+    public String fixAppointment(@RequestParam("customer")String customer, Model m,
+                                 @RequestParam("ref") String ref,
+                                 HttpSession session) {
+        if (session.getAttribute("username") == null || !session.getAttribute("role").equals("operator")){
+            m.addAttribute("customer", new Operator());
+            return "Operator/login";
+        }
+        Apartment apartment = customerService.getAppartmentByRef(ref);
+        m.addAttribute("appr", apartment);
+        m.addAttribute("customer", customer);
+        /*List<Appointment> list = customerService.getAppointmentsList();
+        Appointment[] array = new Appointment[list.size()];
+        array = list.toArray(array);
+        m.addAttribute("customer", this.customer);
+        m.addAttribute("list", array);
+        m.addAttribute("size", list.size());
+        m.addAttribute("appointment", new Appointment());*/
+        return "Operator/fixAppointment";
+    }
+
+    @GetMapping("/Operator/appartmentList")
+    public String apList(@ModelAttribute("SpringWeb")Customer customer, Model m, HttpSession session){
+        if (session.getAttribute("username") == null || !session.getAttribute("role").equals("operator")){
+            m.addAttribute("operator", new Operator());
+            return "Operator/login";
+        }
+        List<Apartment> list = customerService.getAppartmentList();
+        m.addAttribute("array", list);
+        m.addAttribute("customer", customer.getUsername());
+        return "Operator/apListO";
+    }
+
+    @GetMapping("/Operator/customerList")
+    public String customerList(@ModelAttribute("Customer")Customer customerM, @RequestParam("customer")String customer, Model m, HttpSession session){
+        if (session.getAttribute("username") == null || !session.getAttribute("role").equals("operator")){
+            m.addAttribute("operator", new Operator());
+            return "Operator/login";
+        }
+        List<Customer> list;
+        if (customer.equals("default")){
+            list = adminService.getCustomersList();
+        }else {
+            list = customerService.getCustomerByName(customer);
+        }
+        m.addAttribute("array", list);
+        m.addAttribute("customer", customerM);
+        return "Operator/customerList";
+    }
+
+    @GetMapping("/Operator/cancelAppointment")
+    public String cancelAppointment(@ModelAttribute("Customer")Customer customerM,
+                                    @RequestParam("customer")String customer, Model m, HttpSession session) {
+        if (session.getAttribute("username") == null || !session.getAttribute("role").equals("operator")){
+            m.addAttribute("operator", new Operator());
+            return "Operator/login";
+        }
+        List<Appointment> list;
+        if (customer.equals("default")){
+            list = operatorService.getAppList();
+        }else {
+            list = customerService.getAppointmentsListByCustomer(customer);
+        }
+
+        m.addAttribute("array", list);
+        m.addAttribute("appt", new Appointment());
+        return "Operator/cancelAppointment";
     }
 
     @GetMapping("/Operator/addApartment")
@@ -91,6 +168,8 @@ public class OperatorController {
             return "Operator/login";
         }
         m.addAttribute("apartment", new Apartment());
+        List<Building> list = operatorService.getBuildingList();
+        m.addAttribute("array", list);
         return "Operator/addApartment";
     }
 
@@ -101,6 +180,8 @@ public class OperatorController {
             return "Operator/login";
         }
         m.addAttribute("building", new Building());
+        List<Locality> list = operatorService.getLocalityList();
+        m.addAttribute("array", list);
         return "Operator/addBuilding";
     }
 
@@ -114,22 +195,8 @@ public class OperatorController {
         return "Operator/addLocality";
     }
 
-    @GetMapping("/Operator/fixAppointment")
-    public String fixAppointment(Model m, HttpSession session) {
-        if (session.getAttribute("username") == null || !session.getAttribute("role").equals("operator")){
-            m.addAttribute("operator", new Operator());
-            return "Operator/login";
-        }
-        List<Appointment> list = operatorService.createAppointmentsList();
-        Appointment[] array = new Appointment[list.size()];
-        array = list.toArray(array);
-        m.addAttribute("list", array);
-        m.addAttribute("size", list.size());
-        m.addAttribute("appointment", new Appointment());
-        return "Operator/fixAppointment";
-    }
 
-    @GetMapping("/Operator/cancelAppointment")
+    /*@GetMapping("/Operator/cancelAppointment")
     public String cancelAppointment(Model m, HttpSession session) {
         if (session.getAttribute("username") == null || !session.getAttribute("role").equals("operator")){
             m.addAttribute("operator", new Operator());
@@ -142,7 +209,7 @@ public class OperatorController {
         m.addAttribute("size", list.size());
         m.addAttribute("appointment", new Appointment());
         return "Operator/cancelAppointment";
-    }
+    }*/
 
     @PostMapping("/cancelAppointmentSuccess")
     public String cancelAppointmentSuccess(@Valid @ModelAttribute("SpringWeb")Appointment appointment, BindingResult bindingResult, Model model,
@@ -159,17 +226,23 @@ public class OperatorController {
     }
 
     @PostMapping("/fixAppointmentSuccess")
-    public String fixAppointmentSuccess(@Valid @ModelAttribute("SpringWeb")Appointment appointment, BindingResult bindingResult, Model model,
-                                        HttpSession session){
+    public String fixAppointmentSuccess(@RequestParam("app_ref") String ref,
+                                        @RequestParam("customer") String customer,
+                                        @RequestParam("date") String date, @RequestParam("time") String time,
+                                        Model model,
+                                        HttpSession session) throws ParseException{
         if (session.getAttribute("username") == null || !session.getAttribute("role").equals("operator")){
             model.addAttribute("operator", new Operator());
             return "Operator/login";
         }
-        if(bindingResult.hasErrors())
-            return "Operator/fixAppointment";
-
-        operatorService.addAppointment(appointment);
-        model.addAttribute("appointment", appointment);
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
+        long tm = sdf.parse(time).getTime();
+        Time t = new Time(tm);
+        System.out.println(t);
+        Appointment app = customerService.chooseApp(java.sql.Date.valueOf(date), t,
+                                                    customer, ref);
+        System.out.println(app);
+        customerService.fixApp(app);
         return "Operator/operatorSpace";
     }
 
@@ -267,6 +340,7 @@ public class OperatorController {
         return "Operator/operatorSpace";
     }
 
+
     @PostMapping("/addApartmentSuccess")
     public String addApartmentSuccess(@RequestParam("reference")String reference, @RequestParam("price")String price,
                                       @RequestParam("floor")String floor, @RequestParam("type")String type,
@@ -277,6 +351,7 @@ public class OperatorController {
             model.addAttribute("operator", new Operator());
             return "Operator/login";
         }
+        System.out.println(pictures.length);
         Apartment apartment = operatorService.createApartment(reference, price, floor, type, nbrRoom, building, surface, nbrBalcony, pictures);
         operatorService.addApartment(apartment);
         model.addAttribute("apartment", apartment);

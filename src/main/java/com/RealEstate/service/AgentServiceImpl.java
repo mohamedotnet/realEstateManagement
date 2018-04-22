@@ -2,9 +2,11 @@ package com.RealEstate.service;
 
 
 import com.RealEstate.dao.AgentDao;
+import com.RealEstate.dao.AppointmentDao;
 import com.RealEstate.dao.ReportDao;
 import com.RealEstate.dao.VisitDao;
 import com.RealEstate.model.Agent;
+import com.RealEstate.model.Appointment;
 import com.RealEstate.model.Report;
 import com.RealEstate.model.Visit;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,8 @@ public class AgentServiceImpl implements AgentService {
     @Autowired
     protected VisitDao visitDao;
 
+    @Autowired
+    AppointmentDao appointmentDao;
     public AgentServiceImpl() {
 
     }
@@ -88,6 +92,11 @@ public class AgentServiceImpl implements AgentService {
         reportDao.updateReport(report);
     }
 
+    @Override
+    public void validateAppointment(Appointment appointment, String agent) {
+        appointmentDao.confirmAppointment(appointment, agent);
+    }
+
     public List<Report> getReportsList() {
         return reportDao.getReportsList();
     }
@@ -98,6 +107,11 @@ public class AgentServiceImpl implements AgentService {
 
     public List<Visit> getVisitsListByAgent(String username) {
         return visitDao.getVisitsListByAgent(username);
+    }
+
+    @Override
+    public List<Appointment> getAppList(Agent agent) {
+        return appointmentDao.getAppointmentsListByLocality(agent);
     }
 
     public String changeProfilePicture(MultipartFile file, String username) {

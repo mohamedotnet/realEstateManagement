@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link href="/resources/css/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/customer.css" />">
 </head>
 
 <style>
@@ -105,8 +106,8 @@
             <!-- Sidebar Header -->
             <div class="sidebar-header">
                 <picture>
-                    <source srcset="/resources/images/profile_female.png" type="image/svg+xml">
-                    <img src="/resources/images/profile_female.png" class="img-fluid img-thumbnail" alt="profile_pic">
+                    <source srcset="/${operator.picture}" type="image/svg+xml">
+                    <img src="/${operator.picture}" class="img-fluid img-thumbnail" alt="profile_pic">
                 </picture>
             </div>
 
@@ -117,20 +118,27 @@
                 <li><a href="${pageContext.request.contextPath}/Operator/addBuilding">Ajouter Un Batiment</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addLocality">Ajouter Une Localité</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/addCustomer">Ajouter Un Client</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment">Annuler Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/customerList?customer=default">Fixer Un Rendez-Vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Operator/cancelAppointment?customer=default">Annuler Un Rendez-Vous</a></li>
                 <li><a href="${pageContext.request.contextPath}/Operator/changeProfilePicture">Changer Photo De Profile</a></li>
-                <li><a href="${pageContext.request.contextPath}/Operator/fixAppointment">Fixer Un Rendez-Vous</a></li>
-                <li><form action="/logout" method="post">
-                    <button type="submit" class="btn btn-primary mb-2">Se Déconnecter</button>
-                </form></li>
             </ul>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn btn-light ml-4" style="width:200px;">Se Déconnecter</button>
+            </form>
         </nav>
 
-        <div id="content">
-            <h1 class="display-1"> Welcome ${operator.name}</h1>
+        <div class="col-md-6 order-md-1">
+            <form action="/changePictureSuccessO" method="post" enctype="multipart/form-data">
+                <div class="custom-file">
+                    <input name="file" type="file" class="custom-file-input" id="validatedCustomFile"/>
+                    <label class="custom-file-label" for="validatedCustomFile">Photo de profile...</label>
+                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block"  type="submit">Ajouter</button>
+            </form>
         </div>
 
-    </div>
 
     <script src="/resources/js/jquery.js"></script>
     <script src="/resources/js/popper-min.js" ></script>

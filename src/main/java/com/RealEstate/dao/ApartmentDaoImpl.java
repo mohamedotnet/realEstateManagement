@@ -1,6 +1,7 @@
 package com.RealEstate.dao;
 
 import com.RealEstate.model.Apartment;
+import com.RealEstate.model.Locality;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,6 @@ import javax.persistence.Query;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -22,6 +22,22 @@ public class ApartmentDaoImpl implements ApartmentDao {
 
     public ApartmentDaoImpl() {
 
+    }
+
+    @Override
+    public Locality getAppartmentLocality(String locality) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createNativeQuery("SELECT * FROM locality WHERE name IN " +
+                                                         "(SELECT locality FROM building WHERE building.id " +
+                                                         "IN (SELECT id_building FROM societeimmobiliere.apartment WHERE apartment.reference = :ref))");
+        query.setParameter("ref", locality);
+        List list = query.getResultList();
+        session.getTransaction().commit();
+        session.close();
+        if(list.size() > 0)
+            return (Locality) list.get(0);
+        return null;
     }
 
     public void storeApartment(Apartment ap) {
@@ -150,7 +166,7 @@ public class ApartmentDaoImpl implements ApartmentDao {
                 pics[i] = reference + "Picture" + i + ".jpg";
                 try {
                     byte[] bytes = pictures[i].getBytes();
-                    String rootPath = "C:\\Users\\B.IHAB\\workspace3\\RealEstate\\src\\main\\resources\\images\\apartment";
+                    String rootPath = "C:\\Users\\Sassi\\Documents\\RealEstate-master\\src\\main\\resources\\images\\apartment";
                     File dir = new File(rootPath + File.separator + reference);
                     if (!dir.exists())
                         dir.mkdirs();

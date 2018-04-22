@@ -25,10 +25,12 @@ public class Visit implements Serializable {
     @Column(name = "agent")
     private String agent;
 
-    public Visit(String appointment, String customer, String agent) {
+    public Visit(String appointment, Date date, Time time, String customer, String agent) {
         this.appointment = appointment;
-        this.date = new java.sql.Date(new java.util.Date().getTime());
-        this.time = new java.sql.Time(new java.util.Date().getTime());
+        /*this.date = new java.sql.Date(new java.util.Date().getTime());
+        this.time = new java.sql.Time(new java.util.Date().getTime());*/
+        this.date = date;
+        this.time = time;
         this.customer = customer;
         this.agent = agent;
     }

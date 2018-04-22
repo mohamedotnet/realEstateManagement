@@ -233,7 +233,7 @@
                             </div>
                         </div>
                         <div class="custom-file">
-                            <input name="file" type="hidden" class="custom-file-input" id="validatedCustomFile"/>
+                            <input name="file" type="file" class="custom-file-input" id="validatedCustomFile"/>
                             <label class="custom-file-label" for="validatedCustomFile">Photo de profile...</label>
                             <div class="invalid-feedback">Example invalid custom file feedback</div>
                         </div>

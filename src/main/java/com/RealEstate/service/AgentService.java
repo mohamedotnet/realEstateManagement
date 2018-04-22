@@ -1,6 +1,7 @@
 package com.RealEstate.service;
 
 import com.RealEstate.model.Agent;
+import com.RealEstate.model.Appointment;
 import com.RealEstate.model.Report;
 import com.RealEstate.model.Visit;
 import org.springframework.web.multipart.MultipartFile;
@@ -20,7 +21,9 @@ public interface AgentService {
     void removeReport(int id);
     void editReport(Report report);
 
+    void validateAppointment(Appointment appointment, String agent);
     List<Report> getReportsList();
     List<Visit> getVisitsList();
     List<Visit> getVisitsListByAgent(String username);
+    List<Appointment> getAppList(Agent agent);
 }

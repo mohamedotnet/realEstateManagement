@@ -6,7 +6,124 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="090903ff-c07c-48d9-b7b2-095aa7899d04" name="Default" comment="" />
+    <list default="true" id="090903ff-c07c-48d9-b7b2-095aa7899d04" name="Default" comment="+Appointment System&#10;+Enhanced UI">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/appointments.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/apList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/appointments.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/apListO.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/customerList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/controller/AgentController.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/controller/AgentController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/controller/CustomerController.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/controller/CustomerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/controller/OperatorController.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/controller/OperatorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/ApartmentDao.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/ApartmentDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/ApartmentDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/ApartmentDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/AppointmentDao.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/AppointmentDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/AppointmentDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/AppointmentDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/CustomerDao.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/CustomerDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/CustomerDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/CustomerDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/OperatorDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/dao/OperatorDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/model/Appointment.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/model/Appointment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/model/Visit.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/model/Visit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/service/AgentService.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/service/AgentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/service/AgentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/service/AgentServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/service/CustomerService.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/service/CustomerService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/service/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/service/CustomerServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/service/OperatorService.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/service/OperatorService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/RealEstate/service/OperatorServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/RealEstate/service/OperatorServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/controller/AgentController.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/controller/AgentController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/controller/CustomerController.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/controller/CustomerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/controller/OperatorController.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/controller/OperatorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/ApartmentDao.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/ApartmentDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/ApartmentDaoImpl.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/ApartmentDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/AppointmentDao.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/AppointmentDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/AppointmentDaoImpl.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/AppointmentDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/CustomerDao.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/CustomerDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/CustomerDaoImpl.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/CustomerDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/OperatorDaoImpl.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/dao/OperatorDaoImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/model/Appointment.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/model/Appointment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/model/Visit.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/model/Visit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/AgentService.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/AgentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/AgentServiceImpl.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/AgentServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/CustomerService.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/CustomerService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/CustomerServiceImpl.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/CustomerServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/OperatorService.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/OperatorService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/OperatorServiceImpl.class" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/classes/com/RealEstate/service/OperatorServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e7741c36-1338-47d2-894b-15a15deafd45.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/e7741c36-1338-47d2-894b-15a15deafd45.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/ea3ea565-cee0-484e-9d42-ea8759f91d90.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/ea3ea565-cee0-484e-9d42-ea8759f91d90.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/controller/AgentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/controller/AgentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/controller/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/controller/CustomerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/controller/OperatorController.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/controller/OperatorController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ApartmentDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ApartmentDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ApartmentDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ApartmentDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AppointmentDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AppointmentDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AppointmentDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AppointmentDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/CustomerDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/CustomerDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/CustomerDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/CustomerDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/OperatorDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/OperatorDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/model/Appointment.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/model/Appointment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/model/Visit.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/model/Visit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/OperatorService.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/OperatorService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/OperatorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/RealEstate/service/OperatorServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addAgent.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addAgent.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/validateAccount.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/validateAccount.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/addReport.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/addReport.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/agentSpace.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/agentSpace.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/changeProfilePicture.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/changeProfilePicture.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/editReport.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/editReport.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/programVisits.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/programVisits.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/removeReport.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/removeReport.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/addPaymentReceipt.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/addPaymentReceipt.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/cancelAppointment.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/cancelAppointment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/changeProfilePicture.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/changeProfilePicture.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/customerSpace.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/customerSpace.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/fixAppointment.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/fixAppointment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/myPurchases.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/myPurchases.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/sellApartment.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/sellApartment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/validatePayment.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/validatePayment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addApartment.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addApartment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addBuilding.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addBuilding.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addCustomer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addCustomer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addLocality.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addLocality.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/cancelAppointment.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/cancelAppointment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/changeProfilePicture.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/changeProfilePicture.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/fixAppointment.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/fixAppointment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/operatorSpace.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/operatorSpace.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Admin/addAgent.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Admin/addAgent.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Admin/validateAccount.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Admin/validateAccount.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/addReport.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/addReport.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/agentSpace.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/agentSpace.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/changeProfilePicture.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/changeProfilePicture.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/editReport.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/editReport.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/login.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/programVisits.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/programVisits.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/removeReport.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Agent/removeReport.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/addPaymentReceipt.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/addPaymentReceipt.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/cancelAppointment.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/cancelAppointment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/changeProfilePicture.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/changeProfilePicture.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/customerSpace.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/customerSpace.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/fixAppointment.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/fixAppointment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/myPurchases.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/myPurchases.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/sellApartment.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/sellApartment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/validatePayment.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Customer/validatePayment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/addApartment.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/addApartment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/addBuilding.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/addBuilding.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/addCustomer.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/addCustomer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/addLocality.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/addLocality.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/cancelAppointment.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/cancelAppointment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/changeProfilePicture.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/changeProfilePicture.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/fixAppointment.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/fixAppointment.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/login.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/operatorSpace.jsp" afterPath="$PROJECT_DIR$/target/com.RealEstate-1.0-SNAPSHOT/WEB-INF/views/Operator/operatorSpace.jsp" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,34 +145,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerServiceImpl.java">
+      <file leaf-file-name="appointments.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/appointments.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-              <folding>
-                <element signature="e#961#962#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/controller/CustomerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-240">
-              <caret line="157" column="37" lean-forward="true" selection-start-line="157" selection-start-column="37" selection-end-line="157" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fixAppointment.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/fixAppointment.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-163">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="47">
+              <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -68,19 +162,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="JavaScript File" />
         <option value="SCSS File" />
         <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>{pageContext.request.contextPath}{pageContext.request.contextPath}</find>
-      <find>open</find>
       <find>edit</find>
       <find>editAdmin</find>
       <find>admin</find>
@@ -109,10 +201,27 @@
       <find>editCustomerFo</find>
       <find>addA</find>
       <find>addAgent</find>
+      <find>locality</find>
+      <find>apLi</find>
     </findStrings>
     <replaceStrings>
       <replace>agentService</replace>
+      <replace>appartment</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="rootknox" />
+      </list>
+    </option>
+    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -122,57 +231,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/cancelAppointment.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/addPaymentReceipt.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Manager/validateSale.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Manager/managerSpace.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Manager/editContract.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Manager/addContract.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Manager/changeProfilePicture.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Manager/deleteContract.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/operatorSpace.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/fixAppointment.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/changeProfilePicture.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/cancelAppointment.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addLocality.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addBuilding.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addApartment.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/register.jsp" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ea3ea565-cee0-484e-9d42-ea8759f91d90/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/model/Visit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/model/Appointment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ApartmentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/validateAccount.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/OperatorDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addAgent.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ApartmentDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/CustomerDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/CustomerDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/annulerRendezVous.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/controller/CustomerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/ManagerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/ManagerServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ManagerDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/OperatorDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/OperatorDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AdminDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/controller/AgentController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/OperatorService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AppointmentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AppointmentDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/OperatorServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/adminSpace.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ManagerDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AdminDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/CustomerDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/LocalityService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/LocalityServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/service/AdminService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AgentDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AgentDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/registerAdmin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addOperator.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addManager.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addAgent.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/controller/OperatorController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addCustomer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/RealEstate/dao/CustomerDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/operatorSpace.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addApartment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addBuilding.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addCustomer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addLocality.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/apListO.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/cancelAppointment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/changeProfilePicture.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/customerList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/fixAppointment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/removeReport.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/programVisits.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/editReport.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/changeProfilePicture.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/appointments.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/agentSpace.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/addReport.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/validatePayment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/sellApartment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/fixAppointment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/customerSpace.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/changeProfilePicture.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/apList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/addPaymentReceipt.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/cancelAppointment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/myPurchases.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/appointments.jsp" />
       </list>
     </option>
   </component>
@@ -196,12 +305,19 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1532" />
     <option name="y" value="-10" />
     <option name="width" value="1378" />
     <option name="height" value="773" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -217,7 +333,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,13 +398,32 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="RealEstate-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RealEstate-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RealEstate-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RealEstate-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Customer" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,7 +458,7 @@
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.241">
     <configuration name="Tomcat 8.5.241" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.241" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="RealEstate:war exploded">
           <settings>
@@ -336,7 +471,7 @@
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Manager" enabled="true" />
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -495,51 +630,62 @@
       <workItem from="1523526335577" duration="67108000" />
       <workItem from="1523725101478" duration="20337000" />
       <workItem from="1523795136177" duration="4152000" />
-      <workItem from="1523910283754" duration="19182000" />
+      <workItem from="1523910283754" duration="38635000" />
+      <workItem from="1524076392965" duration="61705000" />
+      <workItem from="1524344425569" duration="12703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181705000" />
+    <option name="totallyTimeSpent" value="275566000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30461538" sideWeight="0.5060423" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25692308" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26923078" sideWeight="0.4939577" order="2" side_tool="false" content_ui="tabs" x="1366" y="491" width="1324" height="198" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17220543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17673716" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -548,7 +694,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -564,17 +710,17 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30461538" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17220543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1744713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -584,17 +730,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="+Appointment System&#10;+Enhanced UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="+Appointment System&#10;+Enhanced UI" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/fixAppointment.jsp</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -603,441 +746,488 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/fixAppointment.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/changeProfilePicture.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/cancelAppointment.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addLocality.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addBuilding.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addApartment.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="106" column="13" lean-forward="true" selection-start-line="91" selection-start-column="4" selection-end-line="106" selection-end-column="13" />
-          <folding>
-            <element signature="e#2820#2826#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="94" column="63" lean-forward="true" selection-start-line="94" selection-start-column="63" selection-end-line="94" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ea3ea565-cee0-484e-9d42-ea8759f91d90/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/model/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="10" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="71" column="62" lean-forward="false" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
-          <folding>
-            <element signature="e#1347#1348#0" expanded="true" />
-            <element signature="e#1410#1411#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-            <element signature="e#1535#1536#0" expanded="true" />
-            <element signature="e#1599#1600#0" expanded="true" />
-            <element signature="e#1668#1669#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/ManagerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="44" column="65" lean-forward="false" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
-          <folding>
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/ManagerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="168" column="15" lean-forward="true" selection-start-line="153" selection-start-column="6" selection-end-line="168" selection-end-column="15" />
+        <state relative-caret-position="122">
+          <caret line="135" column="14" lean-forward="false" selection-start-line="135" selection-start-column="14" selection-end-line="135" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/validateAccount.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ApartmentDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1620">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2328">
+          <caret line="180" column="13" lean-forward="true" selection-start-line="180" selection-start-column="13" selection-end-line="180" selection-end-column="13" />
           <folding>
-            <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1524357721523" expanded="true" signature="875:888" ph="SELECT * FRO... " />
+            <marker date="1524357721523" expanded="true" signature="875:897" ph="SELECT name locality" />
+            <marker date="1524357721523" expanded="true" signature="875:1176" ph="SELECT name locality" />
+            <marker date="1524357721523" expanded="true" signature="975:1175" ph="SELECT local... building" />
+            <marker date="1524357721523" expanded="true" signature="1089:1148" ph="SELECT id_bu... apartment" />
+            <marker date="1524357721523" expanded="true" signature="1089:1174" ph="SELECT id_bu... apartment" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ManagerDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/model/Apartment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="144" lean-forward="false" selection-start-line="11" selection-start-column="144" selection-end-line="11" selection-end-column="144" />
+        <state relative-caret-position="-144">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/OperatorDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="148" lean-forward="false" selection-start-line="11" selection-start-column="148" selection-end-line="11" selection-end-column="148" />
+        <state relative-caret-position="216">
+          <caret line="12" column="80" lean-forward="false" selection-start-line="12" selection-start-column="80" selection-end-line="12" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/OperatorService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/editAgents.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="-108">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ManagerDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/editCustomer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="174" column="187" lean-forward="false" selection-start-line="174" selection-start-column="187" selection-end-line="174" selection-end-column="187" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/OperatorDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="171" column="20" lean-forward="false" selection-start-line="171" selection-start-column="20" selection-end-line="171" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/adminSpace.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/CustomerDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/model/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/model/Operator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/model/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1089">
-          <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/model/Locality.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/LocalityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AdminDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AdminDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3402">
-          <caret line="206" column="51" lean-forward="false" selection-start-line="206" selection-start-column="51" selection-end-line="206" selection-end-column="51" />
-          <folding>
-            <marker date="1523923518783" expanded="true" signature="3070:3359" ph="update Admin... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/LocalityDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/LocalityDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/LocalityServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="23" column="169" lean-forward="false" selection-start-line="23" selection-start-column="169" selection-end-line="23" selection-end-column="169" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AgentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="19" column="174" lean-forward="false" selection-start-line="19" selection-start-column="174" selection-end-line="19" selection-end-column="174" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AgentDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding>
-            <marker date="1523925406981" expanded="true" signature="2905:3194" ph="update Agent... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/AdminServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/registerAdmin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="238" column="43" lean-forward="false" selection-start-line="238" selection-start-column="43" selection-end-line="238" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addManager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="235" column="55" lean-forward="false" selection-start-line="235" selection-start-column="55" selection-end-line="235" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addAgent.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="235" column="59" lean-forward="false" selection-start-line="235" selection-start-column="59" selection-end-line="235" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addOperator.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="235" column="55" lean-forward="false" selection-start-line="235" selection-start-column="55" selection-end-line="235" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/OperatorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="109" column="35" lean-forward="false" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="209" column="18" lean-forward="true" selection-start-line="209" selection-start-column="18" selection-end-line="209" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/addCustomer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="147" column="118" lean-forward="false" selection-start-line="147" selection-start-column="118" selection-end-line="147" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addCustomer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1827">
-          <caret line="136" column="112" lean-forward="false" selection-start-line="136" selection-start-column="112" selection-end-line="136" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/controller/OperatorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="199" column="30" lean-forward="true" selection-start-line="199" selection-start-column="30" selection-end-line="199" selection-end-column="30" />
+        <state relative-caret-position="324">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/CustomerDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="244" column="0" lean-forward="false" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+        <state relative-caret-position="208">
+          <caret line="186" column="13" lean-forward="true" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="13" />
+          <folding>
+            <element signature="e#6909#6939#0" expanded="false" />
+            <element signature="e#7343#7373#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1945">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/fixAppointment.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Admin/editCustomers.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="322">
+          <caret line="184" column="14" lean-forward="true" selection-start-line="142" selection-start-column="8" selection-end-line="184" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/annulerRendezVous.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="142" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="75" column="73" lean-forward="false" selection-start-line="75" selection-start-column="73" selection-end-line="75" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/VisitDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/AgentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="108" column="40" lean-forward="false" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+          <folding>
+            <element signature="e#2609#2610#0" expanded="true" />
+            <element signature="e#2671#2672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-536">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/CustomerServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/controller/AgentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-          <folding>
-            <element signature="e#961#962#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="235">
+          <caret line="101" column="47" lean-forward="true" selection-start-line="101" selection-start-column="47" selection-end-line="101" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/controller/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="157" column="37" lean-forward="true" selection-start-line="157" selection-start-column="37" selection-end-line="157" selection-end-column="37" />
+        <state relative-caret-position="330">
+          <caret line="213" column="5" lean-forward="true" selection-start-line="203" selection-start-column="4" selection-end-line="213" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/ApartmentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AppointmentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/dao/AppointmentDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="141" column="34" lean-forward="false" selection-start-line="141" selection-start-column="34" selection-end-line="141" selection-end-column="34" />
+          <folding>
+            <element signature="e#5376#5406#0" expanded="true" />
+            <element signature="e#6865#6895#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/OperatorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="128" column="43" lean-forward="false" selection-start-line="128" selection-start-column="43" selection-end-line="128" selection-end-column="43" />
+          <folding>
+            <element signature="e#3983#3984#0" expanded="true" />
+            <element signature="e#4033#4034#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/service/OperatorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/RealEstate/controller/OperatorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="160" column="24" lean-forward="false" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addApartment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="125" column="109" lean-forward="false" selection-start-line="125" selection-start-column="109" selection-end-line="125" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addBuilding.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="125" column="109" lean-forward="false" selection-start-line="125" selection-start-column="109" selection-end-line="125" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addCustomer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="125" column="109" lean-forward="false" selection-start-line="125" selection-start-column="109" selection-end-line="125" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/addLocality.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="125" column="109" lean-forward="false" selection-start-line="125" selection-start-column="109" selection-end-line="125" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/customerList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="125" column="113" lean-forward="false" selection-start-line="125" selection-start-column="113" selection-end-line="125" selection-end-column="113" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/changeProfilePicture.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="125" column="109" lean-forward="false" selection-start-line="125" selection-start-column="109" selection-end-line="125" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/cancelAppointment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="125" column="109" lean-forward="false" selection-start-line="125" selection-start-column="109" selection-end-line="125" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/operatorSpace.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="125" column="109" lean-forward="true" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/fixAppointment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="125" column="109" lean-forward="false" selection-start-line="125" selection-start-column="109" selection-end-line="125" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Operator/apListO.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="133" column="113" lean-forward="false" selection-start-line="133" selection-start-column="113" selection-end-line="133" selection-end-column="113" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/removeReport.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="124" column="109" lean-forward="false" selection-start-line="124" selection-start-column="109" selection-end-line="124" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/programVisits.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="125" column="113" lean-forward="false" selection-start-line="125" selection-start-column="113" selection-end-line="125" selection-end-column="113" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/editReport.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="124" column="109" lean-forward="false" selection-start-line="124" selection-start-column="109" selection-end-line="124" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/changeProfilePicture.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="124" column="109" lean-forward="false" selection-start-line="124" selection-start-column="109" selection-end-line="124" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/appointments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="125" column="109" lean-forward="false" selection-start-line="125" selection-start-column="109" selection-end-line="125" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/agentSpace.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="124" column="109" lean-forward="false" selection-start-line="124" selection-start-column="109" selection-end-line="124" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Agent/addReport.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="124" column="109" lean-forward="false" selection-start-line="124" selection-start-column="109" selection-end-line="124" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1524357159036" expanded="false" signature="899:2544" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/validatePayment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="123" column="109" lean-forward="false" selection-start-line="123" selection-start-column="109" selection-end-line="123" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/sellApartment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="123" column="109" lean-forward="false" selection-start-line="123" selection-start-column="109" selection-end-line="123" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/fixAppointment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="124" column="109" lean-forward="false" selection-start-line="124" selection-start-column="109" selection-end-line="124" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/customerSpace.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="124" column="109" lean-forward="false" selection-start-line="124" selection-start-column="109" selection-end-line="124" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/changeProfilePicture.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="123" column="109" lean-forward="false" selection-start-line="123" selection-start-column="109" selection-end-line="123" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/apList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="132" column="109" lean-forward="false" selection-start-line="132" selection-start-column="109" selection-end-line="132" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/addPaymentReceipt.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="123" column="109" lean-forward="false" selection-start-line="123" selection-start-column="109" selection-end-line="123" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/cancelAppointment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/myPurchases.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="16" column="80" lean-forward="false" selection-start-line="16" selection-start-column="80" selection-end-line="16" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Customer/appointments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

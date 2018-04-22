@@ -195,10 +195,10 @@
 
     <script>
         window.addEventListener('load', function errMessage() {
-            var err = '${err}';
+            /*var err = '${err}';
             if (err) {
                 toastr.error(err);
-            }
+            }*/
         });
     </script>
     <script>

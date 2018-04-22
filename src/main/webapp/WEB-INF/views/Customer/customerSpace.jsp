@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
     <link href="/resources/css/toastr.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/customer.css" />">
 </head>
 
 <style>
@@ -114,13 +115,15 @@
             <ul class="list-unstyled components">
                 <li class="active"><a href="${pageContext.request.contextPath}/Customer/customerSpace">Acceuil</a></li>
                 <li><a href="${pageContext.request.contextPath}/Customer/addPaymentReceipt">Ajouter Reçu de Paiement</a></li>
-                <li><a href="${pageContext.request.contextPath}/Customer/fixAppointment">Fixer un Rendez-vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Customer/appointments">Mes rendez-vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Customer/appartmentList">Fixer un Rendez-vous</a></li>
+                <li><a href="${pageContext.request.contextPath}/Customer/cancelAppointment">Annuler un Rendez-vous</a></li>
                 <li><a href="${pageContext.request.contextPath}/Customer/myPurchases">Mes achats</a></li>
                 <li><a href="${pageContext.request.contextPath}/Customer/cancelAppointment">Annuler un Paiement</a></li>
-                <li><form action="/logout" method="post">
-                    <button type="submit" class="btn btn-primary mb-2">Se Déconnecter</button>
-                </form></li>
             </ul>
+            <form action="/logout" method="post">
+                <button type="submit" class="btn btn-light ml-4" style="width:200px;">Se Déconnecter</button>
+            </form>
         </nav>
 
         <div id="content">
